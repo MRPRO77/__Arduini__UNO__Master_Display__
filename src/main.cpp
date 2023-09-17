@@ -12,7 +12,7 @@
 
    Autor: Tecnologo. Marcelo Rodrigues     Crea-SP 5070505617
 
-   Data de Inicio: 27/08/2023       Versão:   2023.1.0
+   Data de Inicio: 02/09/2023       Versão:   2023.1.0
 
         
 
@@ -36,12 +36,14 @@
 ________________[_]_[_]_[_]_________/_]_[_\___________________________________
                                                                              
 ============================================================================== */
+// https://capsistema.com.br/index.php/2020/11/27/como-usar-i2c-no-arduino-comunicacao-entre-duas-placas-arduino/
 
 /******************************************************************************/
 #include <Arduino.h>
 #include <SPI.h>
 #include <Wire.h>
 #include "Wire.h"
+
 
 #include "Config_mcu.h"
 
@@ -57,12 +59,11 @@ void setup() {
 void loop() {
 
 
+    Comunicacao_Oled();
 
+         comunicacao();
 
- 
-       comunicacao();
- Supervisionamento(); 
-
-
-
+   Supervisionamento(); 
+   
 }
+
